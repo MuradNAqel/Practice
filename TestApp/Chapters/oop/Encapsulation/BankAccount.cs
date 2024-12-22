@@ -3,34 +3,25 @@
 public class BankAccount
 {
 
-    //property 
-    // const
-    // action
-    private string accountNumber;
-    private decimal balance;
 
-    public BankAccount(string accountNumber, decimal initialBalance)
-    {
-        this.accountNumber = accountNumber;
-        if (initialBalance < 0)
-            throw new ArgumentException("Initial balance cannot be negative.");
-        Balance = initialBalance;
-    }
-
-    public string GetAccountNumber()
-    {
-        return accountNumber;
-    }
-
+    public string AccountNumber { get; private set; }
     public decimal Balance
     {
-        get { return balance; }
+        get { return Balance; }
         private set
         {
             if (value < 0)
                 throw new ArgumentException("Balance cannot be negative.");
-            balance = value;
+            Balance = value;
         }
+    }
+
+    public BankAccount(string accountNumber, decimal initialBalance)
+    {
+        this.AccountNumber = accountNumber;
+        if (initialBalance < 0)
+            throw new ArgumentException("Initial balance cannot be negative.");
+        Balance = initialBalance;
     }
 
     public void Deposit(decimal amount)
