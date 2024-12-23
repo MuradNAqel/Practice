@@ -3,7 +3,6 @@
 public class BankAccount
 {
 
-
     public string AccountNumber { get; private set; }
     public decimal Balance
     {
