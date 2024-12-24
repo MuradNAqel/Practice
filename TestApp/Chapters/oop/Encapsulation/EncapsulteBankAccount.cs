@@ -8,7 +8,7 @@ public class EncapsulteBankAccount
         BankAccount account = new BankAccount("123456789", 500.00m);
 
         // Display account number (read-only)
-        Console.WriteLine($"Account Number: {account.GetAccountNumber()}");
+        Console.WriteLine($"Account Number: {account.AccountNumber}");
 
         // Deposit money
         account.Deposit(200.00m);
